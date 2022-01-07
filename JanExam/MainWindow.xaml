@@ -1,0 +1,21 @@
+﻿<Window x:Class="JanExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JanExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="Member List" HorizontalAlignment="Left" Margin="77,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Member Details" HorizontalAlignment="Left" Margin="436,63,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="LstBoxMemberList" HorizontalAlignment="Left" Height="246" Margin="77,102,0,0" VerticalAlignment="Top" Width="211"/>
+        <TextBlock x:Name="txtBlockMemberDetails" HorizontalAlignment="Left" Margin="436,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="203" Width="201"/>
+        <RadioButton Content="Junior" HorizontalAlignment="Left" Margin="376,372,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Senior" HorizontalAlignment="Left" Margin="288,372,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Regular" HorizontalAlignment="Right" Margin="0,372,529,0" VerticalAlignment="Top"/>
+        <RadioButton Content="All" HorizontalAlignment="Left" Margin="142,372,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

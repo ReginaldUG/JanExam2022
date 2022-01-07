@@ -40,10 +40,13 @@ namespace JanExam
 
             m1.membertype = Member.MemberType.Senior;
             m1.paymentSchedule = Member.PaymentSchedule.Biannual;
+           
             m2.membertype = Member.MemberType.Senior;
             m2.paymentSchedule = Member.PaymentSchedule.Biannual;
+           
             m3.membertype = Member.MemberType.Senior;
             m3.paymentSchedule = Member.PaymentSchedule.Biannual;
+            
             m4.membertype = Member.MemberType.Junior;
             m4.paymentSchedule = Member.PaymentSchedule.Annual;
             m5.membertype = Member.MemberType.Junior;
@@ -55,8 +58,7 @@ namespace JanExam
             m8.membertype = Member.MemberType.Regular;
             m8.paymentSchedule = Member.PaymentSchedule.Monthly;
             m9.membertype = Member.MemberType.Regular;
-            m9.paymentSchedule = Member.PaymentSchedule.Monthly;
-
+            m9.paymentSchedule = Member.PaymentSchedule.Monthly;         
             MembersList.Add(m1);
             MembersList.Add(m2);
             MembersList.Add(m3);
@@ -72,10 +74,9 @@ namespace JanExam
 
         private void LstBoxMemberList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            selectedItem = (Member)LstBoxMemberList.SelectedItem;
-            
-            txtBlockMemberDetails.Text = 
-            
+            selectedItem = (Member)LstBoxMemberList.SelectedItem;           
+            txtBlockMemberDetails.Text = selectedItem.displayDetails(selectedItem);
+
         }
     }
 }

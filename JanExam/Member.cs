@@ -12,6 +12,7 @@ namespace JanExam
         public string name { get; set; }
         public DateTime JoinDate { get; set; }
         public PaymentSchedule paymentSchedule { get; set; }
+        public double schedulefee { get; set; }
         public MemberType membertype { get; set; }
         public double fee { get; set; }
        
@@ -27,7 +28,23 @@ namespace JanExam
             Biannual,
             Monthly
         }
-        
+        public double ScheduleFee()
+        {
+            if (paymentSchedule == PaymentSchedule.Biannual)
+            {
+                schedulefee = fee / 2;
+            }
+            if (paymentSchedule == PaymentSchedule.Annual)
+            {
+                schedulefee = fee;
+            }
+            if (paymentSchedule == PaymentSchedule.Monthly)
+            {
+                schedulefee = fee / 12;
+            }
+            return schedulefee;
+
+        }
         public Member()
         {
 
@@ -46,7 +63,10 @@ namespace JanExam
         public string displayDetails(Member SelectedItems)
         {
             string displayInfo;
-            displayInfo = $"{SelectedItems.name}\nJoin date: {SelectedItems.JoinDate}\nBasic Fee: {SelectedItems.fee}";
+            displayInfo = $"{SelectedItems.name}\nJoin date: {SelectedItems.JoinDate.ToShortDateString()}" +
+                $"\nBasic Fee: {SelectedItems.fee}\nMember Type: {SelectedItems.membertype}\nPayment Schedule: {SelectedItems.paymentSchedule} - {SelectedItems.ScheduleFee()}";
+            
+            
             return displayInfo;
         }
     }

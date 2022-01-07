@@ -64,7 +64,7 @@ namespace JanExam
         {
             string displayInfo;
             displayInfo = $"{SelectedItems.name}\nJoin date: {SelectedItems.JoinDate.ToShortDateString()}" +
-                $"\nBasic Fee: {SelectedItems.fee}\nMember Type: {SelectedItems.membertype}\nPayment Schedule: {SelectedItems.paymentSchedule} - {SelectedItems.ScheduleFee()}";
+                $"\nBasic Fee: {SelectedItems.fee:c2}\nMember Type: {SelectedItems.membertype}\nPayment Schedule: {SelectedItems.paymentSchedule} - {SelectedItems.ScheduleFee():c2}";
             
             
             return displayInfo;

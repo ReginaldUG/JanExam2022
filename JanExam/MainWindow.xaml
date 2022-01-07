@@ -12,10 +12,10 @@
         <Label Content="Member Details" HorizontalAlignment="Left" Margin="436,63,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="LstBoxMemberList" HorizontalAlignment="Left" Height="246" Margin="77,102,0,0" VerticalAlignment="Top" Width="211"/>
         <TextBlock x:Name="txtBlockMemberDetails" HorizontalAlignment="Left" Margin="436,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="203" Width="201"/>
-        <RadioButton Content="Junior" HorizontalAlignment="Left" Margin="376,372,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Senior" HorizontalAlignment="Left" Margin="288,372,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Regular" HorizontalAlignment="Right" Margin="0,372,529,0" VerticalAlignment="Top"/>
-        <RadioButton Content="All" HorizontalAlignment="Left" Margin="142,372,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Junior" HorizontalAlignment="Left" Margin="376,372,0,0" VerticalAlignment="Top" GroupName="RadioButtons"/>
+        <RadioButton Content="Senior" HorizontalAlignment="Left" Margin="288,372,0,0" VerticalAlignment="Top" GroupName="RadioButtons"/>
+        <RadioButton Content="Regular" HorizontalAlignment="Right" Margin="0,372,529,0" VerticalAlignment="Top" GroupName="RadioButtons"/>
+        <RadioButton Content="All" HorizontalAlignment="Left" Margin="142,372,0,0" VerticalAlignment="Top" GroupName="RadioButtons"/>
 
     </Grid>
 </Window>
